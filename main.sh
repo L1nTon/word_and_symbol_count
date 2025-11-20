@@ -10,6 +10,7 @@ total_chars=0
 total_files=0
 
 for f in *.txt; do
+    [[ "$f" == "$output" ]] && continue
     # пропустить, если файлов нет
     [ -e "$f" ] || continue
 
